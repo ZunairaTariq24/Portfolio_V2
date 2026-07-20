@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Initialize Resend
 const getResendClient = () => {
-  const apiKey = process.env.RESEND_API_KEY || 're_KuqL4uo8_HncHXgT8GcJxHYbYMqzfGt7i';
+  const apiKey = process.env.RESEND_API_KEY || 're_GLDuQb7D_PDUDkD9mqzvPQwmUuiqr8ymP';
   return new Resend(apiKey);
 };
 
