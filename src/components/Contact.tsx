@@ -17,6 +17,7 @@ export default function Contact({ onCopyEmail }: ContactProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validate = () => {
     const tempErrors: Record<string, string> = {};
@@ -52,19 +53,37 @@ export default function Contact({ onCopyEmail }: ContactProps) {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate reliable endpoint sending sequence
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to dispatch message packet.');
+      }
+
       setIsSuccess(true);
       // Reset form
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 2000);
+    } catch (err: any) {
+      console.error(err);
+      setSubmitError(err.message || 'An unexpected connection error occurred.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -286,6 +305,13 @@ export default function Contact({ onCopyEmail }: ContactProps) {
                       </p>
                     )}
                   </div>
+
+                  {submitError && (
+                    <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 text-xs flex items-start gap-2">
+                      <AlertTriangle size={14} className="shrink-0 mt-0.5" />
+                      <span>{submitError}</span>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button

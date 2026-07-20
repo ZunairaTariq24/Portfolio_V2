@@ -6,10 +6,9 @@ interface CommandPaletteProps {
   onClose: () => void;
   onNavigate: (sectionId: string) => void;
   onCopyEmail: () => void;
-  onDownloadResume: () => void;
 }
 
-export default function CommandPalette({ isOpen, onClose, onNavigate, onCopyEmail, onDownloadResume }: CommandPaletteProps) {
+export default function CommandPalette({ isOpen, onClose, onNavigate, onCopyEmail }: CommandPaletteProps) {
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -23,7 +22,6 @@ export default function CommandPalette({ isOpen, onClose, onNavigate, onCopyEmai
     { id: 'certifications', label: 'Go to Certifications', category: 'Navigation', icon: GraduationCap, action: () => onNavigate('certifications') },
     { id: 'contact', label: 'Go to Contact Form', category: 'Navigation', icon: Mail, action: () => onNavigate('contact') },
     { id: 'copy-email', label: 'Copy Email Address', category: 'Utility', icon: Mail, action: () => { onCopyEmail(); onClose(); } },
-    { id: 'download-resume', label: 'Download Resume (PDF)', category: 'Utility', icon: FileText, action: () => { onDownloadResume(); onClose(); } },
     { id: 'github', label: 'Visit GitHub Profile', category: 'External', icon: Github, action: () => { window.open('https://github.com/zunairatariq985', '_blank'); onClose(); } },
     { id: 'linkedin', label: 'Visit LinkedIn Profile', category: 'External', icon: Linkedin, action: () => { window.open('https://linkedin.com/in/zunaira-tariq', '_blank'); onClose(); } },
   ];

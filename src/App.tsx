@@ -26,8 +26,7 @@ export default function App() {
   const [isLoadingScreen, setIsLoadingScreen] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
 
-  // Download / Copy feedbacks
-  const [isDownloadingResume, setIsDownloadingResume] = useState(false);
+  // Copy feedbacks
   const [toast, setToast] = useState<{ show: boolean; message: string; type: 'success' | 'info' }>({
     show: false,
     message: '',
@@ -105,24 +104,6 @@ export default function App() {
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('zunairatariq985@gmail.com');
     triggerToast('Email address copied to clipboard!', 'success');
-  };
-
-  const handleDownloadResume = () => {
-    setIsDownloadingResume(true);
-    triggerToast('Compiling secure PDF resume packet...', 'info');
-
-    setTimeout(() => {
-      setIsDownloadingResume(false);
-      triggerToast('Resume compilation success! Download initiated.', 'success');
-
-      // Trigger standard virtual download hook for the portfolio PDF
-      const link = document.createElement('a');
-      link.href = '#resume-pdf';
-      link.setAttribute('download', 'Zunaira_Tariq_Resume.pdf');
-      document.body.appendChild(link);
-      // Let's mock download success beautifully
-      link.remove();
-    }, 2500);
   };
 
   const handleNavigate = (sectionId: string) => {
@@ -210,7 +191,6 @@ export default function App() {
         onClose={() => setIsCommandPaletteOpen(false)}
         onNavigate={handleNavigate}
         onCopyEmail={handleCopyEmail}
-        onDownloadResume={handleDownloadResume}
       />
 
       {/* Primary Landing Page components */}
@@ -223,8 +203,6 @@ export default function App() {
             onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
             onNavigate={handleNavigate}
             activeSection={activeSection}
-            onResumeDownload={handleDownloadResume}
-            isDownloadingResume={isDownloadingResume}
           />
 
           {/* Core Sections */}

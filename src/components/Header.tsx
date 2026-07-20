@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Sun, Moon, Search, FileDown, Briefcase } from 'lucide-react';
+import { Menu, X, Sun, Moon, Search, Briefcase } from 'lucide-react';
 
 interface HeaderProps {
   isDarkMode: boolean;
@@ -8,8 +8,6 @@ interface HeaderProps {
   onOpenCommandPalette: () => void;
   onNavigate: (sectionId: string) => void;
   activeSection: string;
-  onResumeDownload: () => void;
-  isDownloadingResume: boolean;
 }
 
 export default function Header({
@@ -18,8 +16,6 @@ export default function Header({
   onOpenCommandPalette,
   onNavigate,
   activeSection,
-  onResumeDownload,
-  isDownloadingResume,
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -128,16 +124,6 @@ export default function Header({
             {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
           </button>
 
-          {/* Resume Download */}
-          <button
-            onClick={onResumeDownload}
-            disabled={isDownloadingResume}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200/50 dark:border-zinc-800/60 text-zinc-700 dark:text-zinc-300 text-xs font-semibold tracking-wide transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer group"
-          >
-            <FileDown size={14} className={isDownloadingResume ? 'animate-bounce' : 'transition-transform duration-200 group-hover:translate-y-0.5'} />
-            <span>{isDownloadingResume ? 'Downloading...' : 'Resume'}</span>
-          </button>
-
           {/* Hire Me CTA */}
           <button
             onClick={() => handleNavClick('contact')}
@@ -206,14 +192,6 @@ export default function Header({
               })}
 
               <div className="pt-4 border-t border-zinc-200/50 dark:border-zinc-800/50 flex flex-col gap-2">
-                <button
-                  onClick={onResumeDownload}
-                  disabled={isDownloadingResume}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 text-xs font-semibold border border-zinc-200 dark:border-zinc-800"
-                >
-                  <FileDown size={14} className={isDownloadingResume ? 'animate-bounce' : ''} />
-                  <span>{isDownloadingResume ? 'Downloading Resume...' : 'Download Resume'}</span>
-                </button>
                 <button
                   onClick={() => handleNavClick('contact')}
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#4F46E5] hover:to-[#7C3AED] text-white text-xs font-semibold"
