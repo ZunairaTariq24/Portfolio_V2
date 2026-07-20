@@ -82,11 +82,24 @@ export default function Services() {
                 </div>
               </div>
 
-              {/* Simulated conversion cue link */}
-              <div className="text-[11px] font-bold text-indigo-500 dark:text-indigo-400 flex items-center gap-1 opacity-80 group-hover:opacity-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-all duration-200 cursor-pointer w-fit">
+              {/* Active conversion cue link */}
+              <button
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  window.dispatchEvent(
+                    new CustomEvent('inquire-service', {
+                      detail: { title: serv.title },
+                    })
+                  );
+                }}
+                className="text-[11px] font-bold text-indigo-500 dark:text-indigo-400 flex items-center gap-1 opacity-80 group-hover:opacity-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-all duration-200 cursor-pointer w-fit border-none bg-transparent p-0"
+              >
                 <span>Inquire About Service</span>
                 <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-              </div>
+              </button>
             </motion.div>
           ))}
         </div>

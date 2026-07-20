@@ -42,7 +42,7 @@ export default function Footer({ onNavigate, onCopyEmail }: FooterProps) {
 
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/zunairatariq985"
+                href="https://github.com/ZunairaTariq24/"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/40"
@@ -51,7 +51,7 @@ export default function Footer({ onNavigate, onCopyEmail }: FooterProps) {
                 <Github size={14} />
               </a>
               <a
-                href="https://linkedin.com/in/zunaira-tariq"
+                href="https://www.linkedin.com/in/zunaira-tariq-926b1b33a/"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-indigo-500 dark:hover:text-blue-400 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/40"

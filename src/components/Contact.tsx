@@ -14,6 +14,21 @@ export default function Contact({ onCopyEmail }: ContactProps) {
     message: '',
   });
 
+  React.useEffect(() => {
+    const handleInquire = (e: Event) => {
+      const customEvent = e as CustomEvent<{ title: string }>;
+      if (customEvent.detail && customEvent.detail.title) {
+        setFormData((prev) => ({
+          ...prev,
+          subject: `Inquiry: ${customEvent.detail.title}`,
+          message: `Hi Zunaira,\n\nI would like to inquire about your "${customEvent.detail.title}" service for my project. Let's discuss details!`,
+        }));
+      }
+    };
+    window.addEventListener('inquire-service', handleInquire);
+    return () => window.removeEventListener('inquire-service', handleInquire);
+  }, []);
+
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);

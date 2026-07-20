@@ -6,7 +6,7 @@ export const STATS = [
   { value: '18+', label: 'Projects Completed', description: 'Web, Flutter & IoT' },
   { value: '15+', label: 'Technologies', description: 'Full stack development' },
   { value: '10+', label: 'Certifications', description: 'Google, IBM & others' },
-  { value: '3.5', label: 'University CGPA', description: 'Academic excellence' },
+  { value: '3.56', label: 'University CGPA', description: 'Academic excellence' },
   { value: '4+', label: 'Years Coding', description: 'Passionate learning' },
 ];
 
@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
     demoUrl: '#demo',
-    githubUrl: 'https://github.com/zunairatariq985/StudentHub',
+    githubUrl: 'https://github.com/ZunairaTariq24/StudentHub',
     longDescription: 'StudentHub redefines how college students buy, sell, and trade books, electronics, and dorm essentials. By matching a clean, high-performance web interface styled with Tailwind and Bootstrap to a secure Supabase backend, StudentHub handles real-time listings, buyer-seller messaging, and item views analytics. The platform bridges the trust gap inside the university community, offering student-only secure email signups and verified listings.'
   },
   {
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1484662021336-7d45049dfd4f?auto=format&fit=crop&w=800&q=80',
     demoUrl: '#demo',
-    githubUrl: 'https://github.com/zunairatariq985/decision-making-app',
+    githubUrl: 'https://github.com/ZunairaTariq24/decision-making-app',
     longDescription: 'Developed as a specialized educational aid, this Flutter-based application guides young learners through animated real-life dilemmas (e.g., managing a budget, sharing, handling conflict). By utilizing a branching state-tree, the application teaches children the direct consequences of actions in a fun, pressure-free environment, promoting cognitive maturity and confidence.'
   },
   {
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
     demoUrl: '#demo',
-    githubUrl: 'https://github.com/zunairatariq985/TransportManagement',
+    githubUrl: 'https://github.com/ZunairaTariq24/TransportManagement',
     longDescription: 'A classic, robust PHP & MySQL enterprise application built to optimize campus transport. By digitalizing driver lists, bus rotas, and student feedback, this system replaced slow manual scheduling. Students get transparency on departure timetables, while fleet managers can log fuel consumption, maintenance, and route delays.'
   },
   {
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?auto=format&fit=crop&w=800&q=80',
     demoUrl: '#demo',
-    githubUrl: 'https://github.com/zunairatariq985/ShortestPathVisualizer',
+    githubUrl: 'https://github.com/ZunairaTariq24/ShortestPathVisualizer',
     longDescription: 'This tool makes abstract computer science graph theory tactile and understandable. Built with Python, users can click to set "Start" and "End" nodes, block off areas with mouse strokes to construct maze obstacles, and watch the algorithm "flood fill" search directions until the absolute shortest route is computed.'
   },
   {
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
     demoUrl: '#demo',
-    githubUrl: 'https://github.com/zunairatariq985/CourierManagement',
+    githubUrl: 'https://github.com/ZunairaTariq24/CourierManagement',
     longDescription: 'Combining JavaFX desktop designs with enterprise Oracle SQL Database triggers, this courier portal handles high-throughput operations for logistics firms. Features automatic shipping fee calculations based on package weights, real-time driver dispatcher assignments, and transactional tables with primary/foreign key consistency.'
   },
   {
@@ -152,24 +152,46 @@ export const PROJECTS: Project[] = [
     ],
     image: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80',
     demoUrl: '#demo',
-    githubUrl: 'https://github.com/zunairatariq985/IoTHomeAutomation',
+    githubUrl: 'https://github.com/ZunairaTariq24/IoTHomeAutomation',
     longDescription: 'Bridging software and physical hardware, this automation suite runs on the ESP-32 SoC. Users can command light fixtures, monitor micro-climates, and inspect motion detection alerts. The system connects over secure Wi-Fi, using responsive AJAX loops on the local panel for instant appliance switching without delay.'
   }
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: 'freelance-dev',
-    role: 'Freelance Web Developer',
-    company: 'Self-Employed (Local Businesses & Global Clients)',
-    duration: 'Sep 2024 - Present',
-    description: 'Empowering local merchants, startups, and remote clients with modern web storefronts and digital workflows.',
+    id: 'ecozindagi',
+    role: 'Junior Software Developer Intern',
+    company: 'Ecozindagi Pvt limited',
+    duration: 'July 2026 - Present',
+    description: 'Contributing to web development initiatives, collaborating on software components, and designing clean interfaces.',
     bulletPoints: [
-      'Designed and coded responsive business websites using React and Tailwind CSS, increasing client customer retention rates by an average of 40%.',
+      'Assisting in building and refining front-end and full-stack features using modern web technologies.',
+      'Participating in team code reviews, debugging, and software feature implementation.',
+      'Gaining hands-on experience in junior software engineering practices and agile team workflows.'
+    ]
+  },
+  {
+    id: 'hci-internship',
+    role: 'HCI Course Internship: Content creation through AI',
+    company: 'Brain Gym academy',
+    duration: 'Nov 2025 - Feb 2026',
+    description: 'Executed Human-Computer Interaction concepts for educational content generation using generative AI models.',
+    bulletPoints: [
+      'Synthesized and designed interactive educational materials driven by generative AI models.',
+      'Investigated UX patterns for AI tools to optimize child engagement and learning outcomes.',
+      'Coordinated with educators to refine content creation prompts and visual asset generation.'
+    ]
+  },
+  {
+    id: 'freelance-dev',
+    role: 'Freelancer Web Developer / Digital Marketing',
+    company: 'Self-Employed',
+    duration: '2024 - Present',
+    description: 'Empowering local merchants, startups, and remote clients with modern web storefronts and digital marketing campaigns.',
+    bulletPoints: [
+      'Designed and coded responsive business websites using React and Tailwind CSS, increasing client customer retention rates.',
       'Built custom landing pages optimized for fast performance, responsive layout, and clean typography.',
-      'Consulted directly with small business stakeholders to audit UX flows, streamlining checkout funnels and driving higher visitor conversions.',
-      'Integrated lightweight content management and serverless databases like Supabase to give clients autonomous control of their inventories.',
-      'Secured and optimized legacy PHP/MySQL portals, patching SQL injection gaps and boosting server response speeds by 30%.'
+      'Configured search engine optimization (SEO) and run targeted digital marketing campaigns to drive user acquisition.'
     ]
   }
 ];
@@ -177,25 +199,27 @@ export const EXPERIENCES: Experience[] = [
 export const EDUCATIONS: Education[] = [
   {
     id: 'bcs',
-    degree: 'Bachelor of Computer Science',
+    degree: 'Bachelors in Computer Science',
     institution: 'Fatima Jinnah Women University (FJWU)',
-    duration: '2022 - 2026',
-    grade: 'CGPA 3.5 / 4.00',
-    details: 'Specializing in software architecture, database management, and interactive application design. Engaged as a top-performing student, leading academic project teams and mentoring peers.'
+    duration: '2023 - 2027 (Continued)',
+    grade: '3.56 / 4.00',
+    details: 'Specializing in software engineering, database design, and interactive applications. Leading project teams and achieving strong academic standings.'
   },
   {
     id: 'fsc',
     degree: 'FSc Pre-Engineering',
-    institution: 'Punjab Group of Colleges',
-    duration: '2020 - 2022',
-    details: 'Graduated with high honors, mastering core physics, advanced calculus, and structural mechanics, establishing a rigorous logical framework.'
+    institution: 'Askaria Group of colleges',
+    duration: '2021 - 2023',
+    grade: '939 / 1100',
+    details: 'Graduated with high honors, mastering physics, calculus, and logical problem-solving frameworks.'
   },
   {
     id: 'matric',
-    degree: 'Matriculation (Science)',
-    institution: 'Army Public School',
-    duration: '2018 - 2020',
-    details: 'Solidified early training in mathematics, physics, computer fundamentals, and scientific inquiry with exceptional grades.'
+    degree: 'Matric Sciences',
+    institution: 'Fg Sir syed Girls high school',
+    duration: '2019 - 2021',
+    grade: '1015 / 1100',
+    details: 'Built a strong foundation in mathematics, physics, and computer fundamentals with exceptional grades.'
   }
 ];
 
@@ -206,15 +230,15 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: 'Google (Coursera)',
     date: '2025',
     iconName: 'BarChart3',
-    credentialUrl: 'https://coursera.org/verify/google-analytics'
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/YZGDTKFN8YBV'
   },
   {
-    id: 'prompt-engineering',
-    title: 'ChatGPT Prompt Engineering for Developers',
-    issuer: 'DeepLearning.AI',
-    date: '2024',
-    iconName: 'Sparkles',
-    credentialUrl: 'https://deeplearning.ai/prompt-engineering'
+    id: 'ibm-developer',
+    title: 'IBM Software Developer Professional Certificate',
+    issuer: 'IBM (Coursera)',
+    date: '2025',
+    iconName: 'Code',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/B94V1J35BU05'
   }
 ];
 

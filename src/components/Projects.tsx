@@ -139,7 +139,7 @@ export default function Projects() {
             transition={{ delay: 0.2 }}
             className="text-zinc-600 dark:text-zinc-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed"
           >
-            A collection of production-grade campus systems, cross-platform mobile apps, algorithms, and microchip designs. Click "Live Demo" to play with active interactive models!
+            A collection of production-grade campus systems, cross-platform mobile apps, algorithms, and microchip designs. Click "Read More" to inspect system architecture details, databases, and core features!
           </motion.p>
         </div>
 
@@ -226,32 +226,23 @@ export default function Projects() {
                   {/* Actions Bar */}
                   <div className="flex items-center justify-between pt-4 border-t border-zinc-200/30 dark:border-zinc-800/50 w-full gap-2">
                     <button
-                      onClick={() => handleOpenSimulator(project)}
-                      className="flex items-center gap-1 text-[11px] font-bold text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300 cursor-pointer"
+                      onClick={() => handleOpenReadMore(project)}
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/60 text-zinc-700 dark:text-zinc-300 text-xs font-semibold tracking-wide hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors duration-200 cursor-pointer"
                     >
-                      <Play size={12} />
-                      <span>Live Demo</span>
+                      <Eye size={12} />
+                      <span>Read More</span>
                     </button>
 
-                    <div className="flex items-center gap-3">
-                      <button
-                        onClick={() => handleOpenReadMore(project)}
-                        className="flex items-center gap-1 text-[11px] font-bold text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200 cursor-pointer"
-                      >
-                        <Eye size={12} />
-                        <span>Read More</span>
-                      </button>
-
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="p-1 rounded-lg text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
-                        title="GitHub Code"
-                      >
-                        <Github size={12} />
-                      </a>
-                    </div>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors duration-200"
+                      title="GitHub Code"
+                    >
+                      <Github size={12} />
+                      <span>Repository</span>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -338,26 +329,15 @@ export default function Projects() {
                 </div>
 
                 {/* Modal actions footer */}
-                <div className="px-6 py-4 bg-zinc-50 dark:bg-zinc-900/40 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-4">
-                  <button
-                    onClick={() => {
-                      setSelectedProject(null);
-                      handleOpenSimulator(selectedProject);
-                    }}
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 cursor-pointer"
-                  >
-                    <Play size={14} />
-                    <span>Launch Interactive Demo</span>
-                  </button>
-
+                <div className="px-6 py-4 bg-zinc-50 dark:bg-zinc-900/40 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-end gap-4">
                   <a
                     href={selectedProject.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-900"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-500 transition-colors duration-200"
                   >
                     <Github size={14} />
-                    <span>Explore Repository</span>
+                    <span>Explore Repository on GitHub</span>
                   </a>
                 </div>
               </motion.div>

@@ -14,7 +14,6 @@ import ExperienceAndEducation from './components/ExperienceAndEducation';
 import Certifications from './components/Certifications';
 import Services from './components/Services';
 import WhyHireMe from './components/WhyHireMe';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -218,7 +217,6 @@ export default function App() {
             <Certifications />
             <Services />
             <WhyHireMe />
-            <Testimonials />
 
             {/* Simulated Banner Action */}
             <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white select-none relative overflow-hidden">

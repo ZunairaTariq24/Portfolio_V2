@@ -28,8 +28,8 @@ export default function Hero({ onNavigate, onCopyEmail }: HeroProps) {
   }, []);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/zunairatariq985', label: 'GitHub', color: 'hover:text-zinc-900 dark:hover:text-white' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/zunaira-tariq', label: 'LinkedIn', color: 'hover:text-blue-600 dark:hover:text-blue-400' },
+    { icon: Github, href: 'https://github.com/ZunairaTariq24/', label: 'GitHub', color: 'hover:text-zinc-900 dark:hover:text-white' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/zunaira-tariq-926b1b33a/', label: 'LinkedIn', color: 'hover:text-blue-600 dark:hover:text-blue-400' },
     { icon: Globe, href: '#home', label: 'Portfolio', color: 'hover:text-indigo-600 dark:hover:text-indigo-400' },
     { icon: Mail, onClick: onCopyEmail, label: 'Copy Email', color: 'hover:text-emerald-600 dark:hover:text-emerald-400' },
   ];
@@ -122,7 +122,7 @@ export default function Hero({ onNavigate, onCopyEmail }: HeroProps) {
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/60 shadow-xs">
               <CheckCircle size={14} className="text-indigo-500" />
-              <span>FJWU Student (CGPA 3.5)</span>
+              <span>FJWU Student (CGPA 3.56)</span>
             </span>
           </motion.div>
 
@@ -193,7 +193,7 @@ export default function Hero({ onNavigate, onCopyEmail }: HeroProps) {
             className="flex gap-8 items-center border-t border-zinc-200/50 dark:border-zinc-800/50 pt-6 mt-4 w-full select-none"
           >
             <div>
-              <div className="text-2xl font-bold text-zinc-900 dark:text-white font-sans">3.5</div>
+              <div className="text-2xl font-bold text-zinc-900 dark:text-white font-sans">3.56</div>
               <div className="text-[10px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-mono">CGPA</div>
             </div>
             <div className="h-8 w-[1px] bg-zinc-200 dark:bg-zinc-800"></div>
@@ -266,7 +266,7 @@ export default function Hero({ onNavigate, onCopyEmail }: HeroProps) {
                   education: <span className="text-green-300">"FJWU, BCS"</span>,
                 </p>
                 <p className="pl-4">
-                  grade: <span className="text-purple-400">3.5</span>,
+                  grade: <span className="text-purple-400">3.56</span>,
                 </p>
                 <p className="pl-4">
                   stack: [<span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Flutter"</span>, <span className="text-amber-300">"Supabase"</span>],
