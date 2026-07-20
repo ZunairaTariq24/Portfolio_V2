@@ -15,7 +15,10 @@ app.use(express.json());
 
 // Initialize Resend
 const getResendClient = () => {
-  const apiKey = process.env.RESEND_API_KEY || 're_GLDuQb7D_PDUDkD9mqzvPQwmUuiqr8ymP';
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY environment variable is not configured. Please set up your Resend API key in your hosting provider\'s environment variables.');
+  }
   return new Resend(apiKey);
 };
 
